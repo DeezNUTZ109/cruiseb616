@@ -1,1 +1,236 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P&O Cruise B616 - Britannia Iceland Adventure</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: 
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+nav {
+  text-align: center;
+  padding: 15px;
+}
+
+nav button {
+  background: #ffffff;
+  color: #003366;
+  border: none;
+  padding: 10px 18px;
+  margin: 8px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #003366;
+  color: white;
+}
+
+.section {
+  display: none;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.active {
+  display: block;
+}
+
+h2 {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 8px;
+}
+
+.itinerary-buttons button {
+  margin: 6px;
+  padding: 8px 14px;
+  border: none;
+  background-color: #0055a5;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.itinerary-buttons button:hover {
+  background-color: #0077cc;
+}
+
+.day-content {
+  display: none;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.8);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>P&O Cruise B616</h1>
+  <p>14-Night Iceland & British Isles Voyage | Aboard Britannia</p>
+</header>
+
+<nav>
+  <button onclick="showSection('overview')">Overview</button>
+  <button onclick="showSection('itinerary')">Itinerary</button>
+  <button onclick="showSection('food')">Food</button>
+  <button onclick="showSection('drinks')">Beverages</button>
+  <button onclick="showSection('excursions')">Excursions</button>
+</nav>
+
+<!-- OVERVIEW -->
+<div id="overview" class="section active">
+  <h2>Voyage Overview</h2>
+  <p>Cruise B616 is a 14-night adventure sailing from Southampton to Iceland and the British Isles aboard the stunning Britannia.</p>
+  <p>Enjoy scenic sea days, dramatic fjords, volcanic landscapes, historic Scottish ports and vibrant Icelandic culture.</p>
+  <ul>
+    <li>Departure: Southampton, UK</li>
+    <li>Duration: 14 Nights</li>
+    <li>Ship: Britannia</li>
+    <li>Region: Iceland & Northern Europe</li>
+  </ul>
+</div>
+
+<!-- ITINERARY -->
+<div id="itinerary" class="section">
+  <h2>Full Itinerary</h2>
+
+  <div class="itinerary-buttons">
+    <button onclick="showDay('d1')">Day 1</button>
+    <button onclick="showDay('d3')">Cork</button>
+    <button onclick="showDay('d6')">Reykjavik</button>
+    <button onclick="showDay('d8')">Isafjordur</button>
+    <button onclick="showDay('d9')">Akureyri</button>
+    <button onclick="showDay('d12')">Kirkwall</button>
+  </div>
+
+  <div id="d1" class="day-content">
+    <h3>Day 1 – Southampton</h3>
+    <p>Boarding begins, explore the ship, enjoy sail away party, welcome dinner and evening entertainment.</p>
+  </div>
+
+  <div id="d3" class="day-content">
+    <h3>Day 3 – Cobh (Cork), Ireland</h3>
+    <p>Explore historic Cork, Blarney Castle, scenic countryside tours and Irish cultural experiences.</p>
+  </div>
+
+  <div id="d6" class="day-content">
+    <h3>Days 6-7 – Reykjavik (Overnight Stay)</h3>
+    <p>Golden Circle excursions, Blue Lagoon spa, waterfalls, geysers and vibrant Icelandic nightlife.</p>
+  </div>
+
+  <div id="d8" class="day-content">
+    <h3>Day 8 – Isafjordur</h3>
+    <p>Remote fjords, hiking trails, birdwatching and breathtaking natural scenery.</p>
+  </div>
+
+  <div id="d9" class="day-content">
+    <h3>Day 9 – Akureyri</h3>
+    <p>Visit Lake Myvatn, volcanic craters, geothermal landscapes and scenic coastal drives.</p>
+  </div>
+
+  <div id="d12" class="day-content">
+    <h3>Day 12 – Kirkwall (Orkney Islands)</h3>
+    <p>Discover Viking history, ancient stone circles and charming island villages.</p>
+  </div>
+</div>
+
+<!-- FOOD -->
+<div id="food" class="section">
+  <h2>Dining Onboard</h2>
+  <h3>Main Dining</h3>
+  <p>Elegant multi-course meals with rotating menus, formal nights and themed evenings.</p>
+
+  <h3>Buffet & Casual</h3>
+  <p>Horizon Buffet offers breakfast, lunch, dinner and late snacks with global cuisine stations.</p>
+
+  <h3>Speciality Dining (Extra Charge)</h3>
+  <ul>
+    <li>Fine dining experiences</li>
+    <li>Steakhouse options</li>
+    <li>International cuisine nights</li>
+  </ul>
+
+  <h3>Snacks & Sweet Treats</h3>
+  <p>Afternoon tea, desserts, poolside grill and 24-hour room service options.</p>
+</div>
+
+<!-- DRINKS -->
+<div id="drinks" class="section">
+  <h2>Beverages & Bars</h2>
+  <ul>
+    <li>Tea, coffee & water included</li>
+    <li>Cocktails, wines & premium spirits</li>
+    <li>Champagne & speciality drinks</li>
+    <li>Soft drinks & mocktails</li>
+    <li>Drinks packages available</li>
+  </ul>
+
+  <p>Multiple themed bars onboard offer live music, sea views and evening entertainment.</p>
+</div>
+
+<!-- EXCURSIONS -->
+<div id="excursions" class="section">
+  <h2>Shore Excursions</h2>
+  <ul>
+    <li>Golden Circle Tour – Iceland</li>
+    <li>Blue Lagoon Spa Experience</li>
+    <li>Scottish Highlands Scenic Tour</li>
+    <li>Orkney Viking Heritage Tour</li>
+    <li>Irish Castle & Countryside Visits</li>
+  </ul>
+</div>
+
+<footer>
+  <p>P&O Cruise B616 Website | Iceland & British Isles Adventure</p>
+</footer>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(section => {
+    section.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+}
+
+function showDay(id) {
+  document.querySelectorAll('.day-content').forEach(day => {
+    day.style.display = 'none';
+  });
+  document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
